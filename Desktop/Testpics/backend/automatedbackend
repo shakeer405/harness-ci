@@ -1,0 +1,256 @@
+[
+    {
+        "Id": "bba937aaba183f5b649bae8bb79b5e4d165347f5ce80246b9fa722b5a0580b43",
+        "Created": "2022-05-06T07:09:23.561682012Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "npm",
+            "run",
+            "start:prod"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 11517,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-05-06T07:09:25.16404829Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:91bf0d737bf4b09fb5ba38f9229a88e9d811e677521ee27a948923a7759712d8",
+        "ResolvConfPath": "/var/lib/docker/containers/bba937aaba183f5b649bae8bb79b5e4d165347f5ce80246b9fa722b5a0580b43/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/bba937aaba183f5b649bae8bb79b5e4d165347f5ce80246b9fa722b5a0580b43/hostname",
+        "HostsPath": "/var/lib/docker/containers/bba937aaba183f5b649bae8bb79b5e4d165347f5ce80246b9fa722b5a0580b43/hosts",
+        "LogPath": "/var/lib/docker/containers/bba937aaba183f5b649bae8bb79b5e4d165347f5ce80246b9fa722b5a0580b43/bba937aaba183f5b649bae8bb79b5e4d165347f5ce80246b9fa722b5a0580b43-json.log",
+        "Name": "/visual-regression-tracker_api_1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/m_saikumarreddy22_gmail_com/visualRegression/vrt/Visual-Regression-Tracker/imageUploads:/imageUploads:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "visual-regression-tracker_default",
+            "PortBindings": {
+                "3000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "4202"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c6bd97ae5cdeed188d6f85931c53ee676d05642c6cc9773ffe6e0c38dc741339-init/diff:/var/lib/docker/overlay2/7d2502dde97da66951495980a11283b399c7602b04d319ca5d4f101b4f6b9bbe/diff:/var/lib/docker/overlay2/70856528f73124c3a887a522947587e4faad7ab5bf3c6b100d74efe96efc45bf/diff:/var/lib/docker/overlay2/2da10dd162236a385c873696242a340b68b4869ebddbaa9414190d964c3091ad/diff:/var/lib/docker/overlay2/cdf1c145add4002cca744508eb921c622d7792e37799d2b3bbca308f6ae26926/diff:/var/lib/docker/overlay2/6490177ff94968c73089bc0515b30ece585b18cdf57f367f2e789a625106d3b6/diff:/var/lib/docker/overlay2/562eaf0c585e250d1b34d454a1985a4a4bfb650970268d5f456ccb718d9b47b0/diff:/var/lib/docker/overlay2/7c291db83933714410cfd5c914d56d08bd0d5042a9ece46016c6bc51249307c3/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c6bd97ae5cdeed188d6f85931c53ee676d05642c6cc9773ffe6e0c38dc741339/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c6bd97ae5cdeed188d6f85931c53ee676d05642c6cc9773ffe6e0c38dc741339/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c6bd97ae5cdeed188d6f85931c53ee676d05642c6cc9773ffe6e0c38dc741339/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/m_saikumarreddy22_gmail_com/visualRegression/vrt/Visual-Regression-Tracker/imageUploads",
+                "Destination": "/imageUploads",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "bba937aaba18",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DATABASE_URL=postgresql://postgres:postgres@postgres:5432/vrt_db",
+                "JWT_SECRET=tZWkxANhusXYcxe9wMvHXJVct9TY272u",
+                "JWT_LIFE_TIME=1d",
+                "APP_FRONTEND_URL=http://35.220.178.29:8082",
+                "BODY_PARSER_JSON_LIMIT=5mb",
+                "ELASTIC_URL=http://localhost:9200",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=12.18.4",
+                "YARN_VERSION=1.22.4"
+            ],
+            "Cmd": [
+                "npm",
+                "run",
+                "start:prod"
+            ],
+            "Image": "visualregressiontracker/api:4.20.1",
+            "Volumes": {
+                "/imageUploads": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "3f3cc451f5e01929d483a1366ae1f77ddd3b628ec999774cce16a576f4252877",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "visual-regression-tracker",
+                "com.docker.compose.service": "api",
+                "com.docker.compose.version": "1.24.1"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "e468dfd15ae9bb0b718e026c7a60331b763ac062d306dc035d7aeb3992b22081",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "3000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "4202"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "4202"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/e468dfd15ae9",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "visual-regression-tracker_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "bba937aaba18",
+                        "api"
+                    ],
+                    "NetworkID": "127184aeebd26a6f226bdcb9d13dc0c64f8e340a69ea5cf114aa1578d815ceb5",
+                    "EndpointID": "df2469861af539e637bc8e366ece55f10585f9a1f1d591abae5b723700b31f30",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.5",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:05",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,69 @@
+{
+    "terraform-ls.excludeRootModules": [
+        "Terraform1"
+    ],
+    "terraform-ls.rootModules": [
+        "Terraform1"
+    ],
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path.windows": "C:\\Users\\Shakeer\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+        "vscode-kubernetes.kubectl-path.windows": "C:\\Users\\Shakeer\\.vs-kubernetes\\tools\\kubectl\\kubectl.exe"
+    },
+    "k3d.paths": {
+        "k3d.paths.k3d-windows": "C:\\Users\\Shakeer\\.vs-kubernetes\\tools\\k3d\\k3d.exe"
+    },
+    "terraform.languageServer": {
+        "external": false,
+        "pathToBinary": "",
+        "args": [
+            "serve"
+        ],
+        "maxNumberOfProblems": 100,
+        "trace.server": "off"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "yaml.customTags": [
+        "!encrypted/pkcs1-oaep scalar",
+        "!vault scalar",
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "aws.profile": "profile:default",
+    "yaml.schemas": {},
+    "json.schemas": [],
+    "launch": {
+        "configurations": [
+        
+        ]
+    }
+}

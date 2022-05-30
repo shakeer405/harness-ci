@@ -1,0 +1,20 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations: 
+    traffic.sidecar.istio.io/excludeOutboundIPRanges: "0.0.0.0/0"
+  name: "build-pod-jmeter"  
+spec:
+  containers:
+    - command:
+      - "cat":
+      image:  justb4/jmeter
+      imagePullPolicy: Always 
+      name: "jmeter543"
+      tty: true
+    - command:
+      - "cat":
+      name: "jnlp"
+      image: 'jenkins/inbound-agent:4.7-1'
+      tty: true
