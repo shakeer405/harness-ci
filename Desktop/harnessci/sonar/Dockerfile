@@ -1,9 +1,10 @@
 # Stage 1: Build Stage
 FROM docker.io/library/maven:3.8.3-openjdk-17 AS build
-
+COPY . .
 # Set the working directory inside the container
 WORKDIR /app
 
+RUN pwd; ls -lrth
 # Copy the pom.xml file to cache dependencies
 COPY pom.xml .
 
