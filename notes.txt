@@ -1,0 +1,9 @@
+| Goal                    | Command                                               |
+| ----------------------- | ----------------------------------------------------- |
+| Run unit tests          | `mvn test`                                            |
+| Run integration         | `mvn verify`                                          |
+| Skip tests              | `mvn install -DskipTests` or `-Dmaven.test.skip=true` |
+| Run specific test class | `mvn -Dtest=ClassName test`                           |
+| Run specific method     | `mvn -Dtest=ClassName#methodName test`                |
+| Run tests by pattern    | `mvn -Dtest=*ServiceTest test`                        |
+| Run test with debug     | `mvn -Dmaven.surefire.debug test`                     |
