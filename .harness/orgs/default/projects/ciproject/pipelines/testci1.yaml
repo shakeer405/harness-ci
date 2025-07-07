@@ -1,0 +1,43 @@
+pipeline:
+  name: testci-1
+  identifier: testci1
+  projectIdentifier: ciproject
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: harnesscigit
+        build: <+input>
+  stages:
+    - stage:
+        name: appbuild
+        identifier: appbuild
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: k8sconnector
+              namespace: default
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
+          execution:
+            steps:
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: docker1
+                    repo: shakeer123/ciusecase
+                    tags:
+                      - latest
