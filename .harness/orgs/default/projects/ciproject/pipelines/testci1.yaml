@@ -41,3 +41,4 @@ pipeline:
                     repo: shakeer123/ciusecase
                     tags:
                       - latest
+                    dockerfile: Desktop/harnessci/sonar/Dockerfile
