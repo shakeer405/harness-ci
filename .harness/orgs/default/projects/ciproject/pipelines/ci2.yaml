@@ -10,61 +10,70 @@ pipeline:
         connectorRef: harnesscigit
         build: <+input>
   stages:
-    - parallel:
-        - stage:
-            name: build2
-            identifier: build2
-            description: ""
-            type: CI
+    - stage:
+        name: build2
+        identifier: build2
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          infrastructure:
+            type: KubernetesDirect
             spec:
-              cloneCodebase: true
-              caching:
-                enabled: true
-                override: true
-              buildIntelligence:
-                enabled: true
-              infrastructure:
-                type: KubernetesDirect
-                spec:
-                  connectorRef: k8sconnector
-                  namespace: default
-                  automountServiceAccountToken: true
-                  nodeSelector: {}
-                  os: Linux
-              execution:
-                steps:
-                  - step:
-                      type: GitClone
-                      name: GitClone_1
-                      identifier: GitClone_1
+              connectorRef: k8sconnector
+              namespace: default
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
+          execution:
+            steps:
+              - step:
+                  type: GitClone
+                  name: GitClone_1
+                  identifier: GitClone_1
+                  spec:
+                    connectorRef: harnesscigit
+                    build:
+                      type: branch
                       spec:
-                        connectorRef: harnesscigit
-                        build:
-                          type: branch
-                          spec:
-                            branch: main
-        - stage:
-            name: mvn step
-            identifier: mvn_step
-            description: ""
-            type: CI
-            spec:
-              cloneCodebase: true
-              caching:
-                enabled: true
-                override: true
-              buildIntelligence:
-                enabled: true
-              infrastructure:
-                useFromStage: build2
-              execution:
-                steps:
-                  - step:
-                      type: Run
-                      name: mvn clean
-                      identifier: mvn_clean
-                      spec:
-                        connectorRef: docker1
-                        image: harnessci:latest
-                        shell: Sh
-                        command: mvn clean install
+                        branch: main
+    - stage:
+        name: mvn step
+        identifier: mvn_step
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          infrastructure:
+            useFromStage: build2
+          execution:
+            steps:
+              - step:
+                  type: Sonarqube
+                  name: Sonarqube_1
+                  identifier: Sonarqube_1
+                  spec:
+                    mode: orchestration
+                    config: default
+                    target:
+                      type: repository
+                      detection: auto
+                    advanced:
+                      log:
+                        level: info
+                    auth:
+                      access_token: sqp_c95eab6ff7550f2894b56bf5229df50ca3d8dc02
+                      domain: http://148.100.79.130:9000
+                      ssl: false
+                    tool:
+                      project_key: usecase2
