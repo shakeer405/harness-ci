@@ -1,0 +1,44 @@
+pipeline:
+  name: ci2
+  identifier: ci2
+  projectIdentifier: ciproject
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: harnesscigit
+        build: <+input>
+  stages:
+    - stage:
+        name: build2
+        identifier: build2
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: k8sconnector
+              namespace: default
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
+          execution:
+            steps:
+              - step:
+                  type: GitClone
+                  name: GitClone_1
+                  identifier: GitClone_1
+                  spec:
+                    connectorRef: harnesscigit
+                    build:
+                      type: branch
+                      spec:
+                        branch: main
